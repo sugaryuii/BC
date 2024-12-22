@@ -1,0 +1,315 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar.custom-navbar {
+  background-color: #76717178;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.custom-navbar li a {
+  color: #fff;
+}
+.custom-navbar li a:hover {
+  color: #fff;
+}
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+.hero-section {
+  height: 100vh;
+  background-image: url("../images/bg_hero.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #222a35;
+}
+
+.bg-section {
+  padding: 80px 0 220px 0;
+  background-image: url("../images/bg_main.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.bg-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.news-card-outline {
+  border-radius: 24px;
+  border: #2f528f 2px solid;
+  padding: 30px 20px;
+  margin: 20px 0;
+}
+
+.news-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 24px;
+  border: #949494 1px solid;
+  box-shadow: 3px 2px 0.8px rgb(0 0 0 / 50%);
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.icon-box {
+  background-color: #ff8c00;
+  padding: 2rem 1rem;
+  text-align: center;
+  height: auto;
+  transition: all 0.3s ease;
+}
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.icon-box:hover {
+  transform: translateY(-5px);
+}
+
+/*  service*/
+.service-icon {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.service-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.service-item {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #4472c4;
+  background-color: #ffffff;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 170px;
+  height: 3px;
+  color: #7f7f7f;
+  background-color: #4472c4;
+}
+.connect-line-vertical {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 2.5px;
+  height: calc(100% - 20px);
+  background-color: #4472c4;
+  z-index: 1;
+}
+
+.connect-line-horizontal {
+  position: absolute;
+  bottom: -22px;
+  left: 40px;
+  width: calc(100% - 40px);
+  height: 2px;
+  background-color: #4472c4;
+  z-index: 1;
+}
+
+.icon-circle-detail {
+  width: 80px;
+  height: 80px;
+  border: solid 1px #2f528f;
+  background: #ffffff;
+  position: relative;
+  z-index: 2; /* 確保圓圈在線條上方 */
+}
+/* 反向的水平線 */
+.connect-line-horizontal-reverse {
+  position: absolute;
+  bottom: -20px;
+  right: 42px;
+  width: calc(100% - 42px);
+  height: 2.5px;
+  background-color: #ed7d31;
+  z-index: 1;
+}
+.connect-line-vertical-right {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 2px;
+  height: calc(100% - 20px);
+  background-color: #ed7d31;
+  z-index: 1;
+}
+
+.icon-circle-detail-right {
+  border-color: #ed7d31 !important;
+  width: 80px;
+  height: 80px;
+  background: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+/* flow */
+.flow-section {
+  padding: 80px 0 400px 0;
+}
+.flow-step {
+  background: white;
+  border: 1px solid #3d67b1;
+  border-radius: 8px;
+  padding: 2rem 0 3rem 0;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.flow-content {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  background-color: #cfd5eacf;
+  border-radius: 18px;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  min-width: max-content;
+  height: 200px;
+  border: 1px solid #4472c4;
+}
+
+.flow-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.flow-content li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #3c3c3c;
+}
+
+.flow-content li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}
+
+.flow-arrow {
+  position: absolute;
+  left: 110%;
+  top: 30%;
+  transform: translateY(-50%);
+  color: #0d6efd;
+  font-size: 64px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .flow-arrow {
+    display: block;
+  }
+
+  .flow-step {
+    margin-bottom: 0;
+  }
+}
+
+.news-section {
+  padding: 100px 0;
+  background-image: url("../images/bg_main.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.diagonal-text {
+  position: relative;
+}
+.diagonal-line {
+  position: absolute;
+  left: 0px;
+  top: 70px;
+  width: 230px;
+  height: 2.5px;
+  background-color: #4472c4;
+}
+
+.diagonal-line::before {
+  content: "";
+  position: absolute;
+  left: -57px;
+  top: 40px;
+  width: 70px;
+  height: 2px;
+  background-color: #4472c4;
+  transform: rotate(-35deg);
+  transform-origin: left;
+}
+.diagonal-line2 {
+  position: absolute;
+  left: 4px;
+  top: 80px;
+  width: 287px;
+  height: 2px;
+  background-color: #4472c4;
+}
+
+.diagonal-line2::before {
+  content: "";
+  position: absolute;
+  left: -87px;
+  top: 61px;
+  width: 106px;
+  height: 2px;
+  background-color: #4472c4;
+  transform: rotate(-35deg);
+  transform-origin: left;
+}
+.news-section h1 {
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 1025px) {
+}
+@media (max-width: 768px) {
+  .flow-step-layout {
+    margin-bottom: 14rem;
+  }
+  .flow-content {
+    max-width: -webkit-fill-available;
+  }
+}
+/* 平板 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .flow-content {
+    left: 16%;
+  }
+}
