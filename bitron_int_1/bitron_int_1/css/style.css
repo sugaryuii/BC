@@ -1,0 +1,335 @@
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-5px);
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .back-to-top img {
+    width: 40px;
+    height: 40px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar.custom-navbar {
+  background-color: #002060;
+  transition: all 0.3s ease;
+  color: #ffc000;
+}
+
+/* 所有设备的基础样式 */
+.navbar.custom-navbar .navbar-nav li a.active {
+  color: #ffc000 !important;
+  font-weight: bolder;
+}
+
+/* 只在桌面版(992px以上)应用放大效果 */
+@media (min-width: 992px) {
+  .navbar.custom-navbar .navbar-nav li a.active {
+    font-size: 1.2rem;
+    transform: scale(1.1);
+  }
+}
+
+.custom-navbar li a {
+  color: #ffc000;
+  font-weight: bolder;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar li a:hover {
+  color: #ffc000;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+.bg-section {
+  padding: 80px 0 220px 0;
+  background-image: url("../images/bg_hero.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.bg-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5); /* 白色背景，50%透明度 */
+  z-index: 1;
+}
+.bg-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* service */
+.service-card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 24px;
+  border: #cbcbcb 3px solid;
+  box-shadow: 0 0 8px 4px rgba(200, 200, 200, 0.5);
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+.service-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.service-underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: currentColor;
+}
+
+/*  hero icon*/
+.service-icon {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.service-icon img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 3rem;
+  display: inline-block;
+  padding: 0 100px;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background-color: #4472c4;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+  width: 80px;
+  height: 3px;
+  background-color: #4472c4;
+}
+
+#contact {
+  padding-bottom: 120px;
+  position: relative;
+  color: #000000;
+}
+
+footer {
+  text-align: center;
+  padding: 15px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: transparent;
+  border-top: none;
+}
+
+footer small {
+  color: #666;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* flow */
+/* 服務流程區塊樣式 */
+.service-flow-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.service-box {
+  position: relative;
+  background-color: #f5d378;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: #333;
+  line-height: 1.6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.service-box h3 {
+  margin: 0 0 15px 0;
+  font-size: 26px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.service-box p {
+  margin: 0;
+  font-size: 18px;
+  flex: 1;
+  overflow: auto;
+}
+
+/* 箭頭樣式 */
+.service-arrow {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 30px;
+}
+
+.arrow-shaft {
+  fill: #f5d378;
+}
+
+/* 桌面版布局 - 適用於所有大於839px的設備 */
+@media (min-width: 840px) {
+  .service-flow-container {
+    height: 600px;
+    margin-top: 40px;
+  }
+
+  .service-box {
+    position: absolute;
+    width: 295px;
+    height: 210px;
+    margin-bottom: 0;
+  }
+
+  /* 評估現有狀況 */
+  .box1 {
+    top: 60px;
+    left: 70px;
+  }
+
+  /* 測試及優化 */
+  .box2 {
+    top: 60px;
+    right: 70px;
+  }
+
+  /* 選擇新軟體 */
+  .box3 {
+    bottom: 50px;
+    left: 70px;
+  }
+
+  /* 執行計畫 */
+  .box4 {
+    bottom: 50px;
+    right: 70px;
+  }
+
+  /* 箭頭樣式 - 桌面版 */
+  .service-arrow {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    margin: 0;
+  }
+
+  /* 向下箭頭 - 從評估現有狀況到選擇新軟體 */
+  .arrow-down {
+    left: 210px;
+    top: 260px;
+    transform: translateX(-40px);
+  }
+
+  /* 向右箭頭 - 從選擇新軟體到執行計畫 */
+  .arrow-right {
+    left: 357px;
+    bottom: 105px;
+    display: block;
+  }
+
+  /* 向上箭頭 - 從執行計畫到測試及優化 */
+  .arrow-up {
+    right: 216px;
+    bottom: 253px;
+    transform: translateX(40px);
+    display: block;
+  }
+
+  .mobile-arrow {
+    display: none;
+  }
+}
+
+/* 手機版布局 */
+@media (max-width: 839px) {
+  .service-flow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    position: static;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .arrow-right,
+  .arrow-up,
+  .arrow-down {
+    display: none;
+  }
+
+  .mobile-arrow {
+    display: block;
+    margin: 0 auto 20px;
+  }
+}
