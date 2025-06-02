@@ -13,6 +13,12 @@ html {
   font-weight: bolder;
 }
 
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+}
+
 /* 只在桌面版(992px以上) */
 @media (min-width: 992px) {
   body {
@@ -130,11 +136,29 @@ html {
     align-items: flex-start;
   }
 
+ 
+  /* 手機版導航項目 - 擴大點擊範圍 */
+  .navbar.custom-navbar .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+
   .navbar.custom-navbar .navbar-nav .nav-link {
     color: #ffc000;
-    padding: 12px 15px;
+    padding: 15px 20px;
     text-align: left;
     font-size: 1rem;
+    width: 100%;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .navbar.custom-navbar .navbar-nav .nav-link:hover {
+    background-color: rgba(255, 192, 0, 0.1);
+    color: #ffc000;
+    transform: translateX(5px);
   }
 
   .navbar.custom-navbar .navbar-nav .nav-link.active {
@@ -263,7 +287,7 @@ html {
 
   .news-content p {
     font-size: 1rem !important;
-    line-height: 1.6 !important;
+    line-height: 2 !important;
     margin: 20px 0 !important;
   }
 
@@ -288,7 +312,7 @@ html {
   }
 
   footer small {
-    font-size: 12px;
+    font-size: 14px !important;
   }
 }
 
@@ -336,25 +360,11 @@ html {
     font-size: 1rem;
   }
 
-  .flow-step-description {
-    font-size: 0.85rem;
-  }
-
   .news-tag {
     padding: 12px 15px !important;
   }
 
-  .news-tag h5 {
-    font-size: 1rem !important;
-  }
 
-  .news-content p {
-    font-size: 0.9rem !important;
-  }
-
-  #contact .text-h5 {
-    font-size: 0.9rem !important;
-  }
 }
 
 .custom-navbar li a {
@@ -431,6 +441,12 @@ html {
   position: relative;
   z-index: 2;
   width: 100%;
+}
+
+.card-text {
+  padding-top: 15px;
+  line-height: 1.6;
+  font-size: 1.1rem !important;
 }
 
 /* service */
